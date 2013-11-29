@@ -26,4 +26,3 @@
     )
 
 :EOF
-@ECHO ON

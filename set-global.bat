@@ -33,4 +33,3 @@
     ENDLOCAL
 
 :EOF
-@ECHO ON

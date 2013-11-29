@@ -10,4 +10,3 @@
     ENDLOCAL
 
 :EOF
-@ECHO ON

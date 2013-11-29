@@ -20,10 +20,7 @@
     COPY /Y NUL "%TEMP_GLOBALS_FILE%" > NUL 2>&1
 
     FOR /F "TOKENS=1,2*" %%I IN (%IN_GLOBALS_FILE%) DO (
-        ECHO %%I
-        ECHO %%J
         IF NOT %%I == %IN_VAR_NAME% (
-            ECHO %%I
             ECHO %%I %%J >> "%TEMP_GLOBALS_FILE%" 
         )
     )

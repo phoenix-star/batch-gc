@@ -21,7 +21,7 @@
 
     FOR /F "TOKENS=1,2*" %%I IN (%IN_GLOBALS_FILE%) DO (
         IF NOT %%I == %IN_VAR_NAME% (
-            ECHO %%I %%J >> "%TEMP_GLOBALS_FILE%" 
+            ECHO %%I %%J >> "%TEMP_GLOBALS_FILE%"
         )
     )
     

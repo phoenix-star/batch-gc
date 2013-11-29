@@ -21,12 +21,12 @@
 
     FOR /F "TOKENS=1,2*" %%I IN (%IN_GLOBALS_FILE%) DO (
         IF NOT %%I == %IN_VAR_NAME% (
-            ECHO %%I %%J >> "%TEMP_GLOBALS_FILE%" 
+            ECHO %%I %%J>>"%TEMP_GLOBALS_FILE%"
         )
     )
     
-    ECHO %IN_VAR_NAME% %IN_VALUE% >> "%TEMP_GLOBALS_FILE%"
-    TYPE "%TEMP_GLOBALS_FILE%" > "%IN_GLOBALS_FILE%"
+    ECHO %IN_VAR_NAME% "%IN_VALUE%">>"%TEMP_GLOBALS_FILE%"
+    TYPE "%TEMP_GLOBALS_FILE%">"%IN_GLOBALS_FILE%"
     DEL /S /Q "%TEMP_GLOBALS_FILE%" > NUL 2>&1
 
 :RETURN

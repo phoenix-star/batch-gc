@@ -14,7 +14,7 @@
     IF EXIST "%IN_GLOBALS_FILE%" (
         FOR /F "TOKENS=1,2*" %%I IN (%IN_GLOBALS_FILE%) DO (
             IF %%I == %IN_VAR_NAME% (
-                SET VALUE=%%J
+                SET VALUE=%%~J
             )
         )
     )
